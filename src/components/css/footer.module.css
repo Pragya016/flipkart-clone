@@ -1,4 +1,15 @@
 #footer {
-    background-color: lightgrey;
-    height: 350px;
+    background-color: #d3d3d382;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#text {
+    margin: 0;
+    font-size: 0.8rem;
+    color: grey;
+    font-weight: 500;
 }

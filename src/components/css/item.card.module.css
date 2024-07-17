@@ -14,7 +14,9 @@
 }
 
 #box:hover {
-    background-color: lightgrey;
+    background-color: #d3d3d354;
+    border-color: #d3d3d354;
+    transition: all 0.3s;
 }
 
 #image {
