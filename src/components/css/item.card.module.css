@@ -13,6 +13,10 @@
     cursor: pointer;
 }
 
+#box:hover {
+    background-color: lightgrey;
+}
+
 #image {
     height: 150px;
     width: 150px;
