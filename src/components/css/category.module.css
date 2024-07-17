@@ -22,6 +22,12 @@
     background-size: contain;
 }
 
+#details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .categoryText {
     font-size: 0.8rem;
     font-weight: 600;

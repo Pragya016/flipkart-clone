@@ -1,84 +1,34 @@
 import * as React from 'react';
 import styles from './css/category.module.css'
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Dropdown from './Dropdown';
+import { useNavigate } from 'react-router-dom';
 
-export default function MouseOverPopover({ imageId, desc, categories }) {
+export default function Category({ imageId, desc, categories, hasSubCategories }) {
+  const navigate = useNavigate();
+
+  function handleOpenCategory() {
+    navigate('404');
+  }
+
   return (
     <div id={styles.container}>
       <div className={styles.categoryBox}>
         <div id={imageId} className={styles.categoryIcon}></div>
         <div className={styles.desc}>
-            <div className={styles.categoryText}>{desc }</div>
+          <div id={styles.details}>
+            <span className={styles.categoryText}>{desc}</span>
+            <span>{hasSubCategories && <KeyboardArrowDownIcon style={{fontSize: '1rem', color: 'grey', position:'relative', top:'3px'}} />}</span>
+            </div>
         </div>
       </div>
       <div id={styles.popoverContainer}>
       <div className={styles.popover} >
-          {categories.map((cat, index) => (
-            <Dropdown key={index} desc={cat.name} categories={cat.subcategories}  />
+          {categories && categories.length > 0 && categories.map((cat, index) => (
+            <Dropdown key={index} desc={cat.name} categories={cat.subcategories} onOpenCat={handleOpenCategory} onOpenSubCat={handleOpenCategory} />
           ))}
       </div>
       </div>
     </div>
   );
 }
-
-// import * as React from 'react';
-// import Popover from '@mui/material/Popover';
-// import styles from './css/category.module.css'
-// import Dropdown from './Dropdown';
-
-// export default function MouseOverPopover({ imageId, desc, categories}) {
-//   const [anchorEl, setAnchorEl] = React.useState(null);
-//   const { subcategories } = categories;
-//   const handlePopoverOpen = (event) => {
-//     setAnchorEl(event.currentTarget);
-//   };
-
-//   const handlePopoverClose = () => {
-//     setAnchorEl(null);
-//   };
-
-//   const open = Boolean(anchorEl);
-
-//   return (
-//     <div>
-//       <div
-//         aria-owns={open ? 'mouse-over-popover' : undefined}
-//         aria-haspopup="true"
-//         onMouseOver={handlePopoverOpen}
-//         // onMouseLeave={handlePopoverClose}
-//         className={styles.categoryBox}      
-//       >
-//         <div id={imageId} className={styles.categoryIcon}></div>
-//         <div className={styles.desc}>
-//             <div className={styles.categoryText}>{desc }</div>
-//         </div>
-//       </div>
-//       <Popover
-//         id="mouse-over-popover"
-//         sx={{
-//           pointerEvents: 'none',
-//         }}
-//         style={{cursor:'pointer'}}
-//         open={open}
-//         anchorEl={anchorEl}
-//         anchorOrigin={{
-//           vertical: 'bottom',
-//           horizontal: 'left',
-//         }}
-//         transformOrigin={{
-//           vertical: 'top',
-//           horizontal: 'left',
-//         }}
-//         onClose={handlePopoverClose}
-//         disableRestoreFocus
-//       >
-//       <div id={styles.popover} onMouseLeave={handlePopoverClose}>
-//           {subcategories.map((cat, index) => (
-//             <Dropdown key={index} desc={cat.name} categories={cat.subcategories}  />
-//           ))}
-//       </div>
-//       </Popover>
-//     </div>
-//   );
-// }

@@ -1,0 +1,23 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background: white;
+}
+
+#imageContainer {
+    background: url(https://img1a.flixcart.com/www/linchpin/fk-cp-zion/img/error-500_f9bbb4.png) no-repeat;
+    height: 300px;
+    width: 450px;
+    background-size: cover;
+    background-position: top;
+    margin-top: -40px;
+}
+
+#message {
+    font-size: 1.2rem;
+    font-weight: 500;
+}

@@ -16,6 +16,7 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import { Divider } from '@mui/material';
 
+
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
@@ -166,6 +167,7 @@ export default function PrimarySearchAppBar() {
             noWrap
             component="div"
             sx={{ display: { xs: 'none', sm: 'block' } }}
+            style={{fontWeight:700}}
           >
             Flipkart
           </Typography>
@@ -175,7 +177,7 @@ export default function PrimarySearchAppBar() {
             </SearchIconWrapper>
             <StyledInputBase
               placeholder="Search for Products, Brands and More"
-              inputProps={{ 'aria-label': 'search' , width:'100%'}}
+              inputProps={{ 'aria-label': 'search', width: '100%' }}
             />
           </Search>
           <Box sx={{ flexGrow: 1 }} />

@@ -7,7 +7,7 @@ export default function CategoriesList() {
     return (
         <div id={styles.categories}>
             {categories.map(cat => (
-                <Catergory key={cat.id} imageId={styles[cat.id]} desc={cat.name} categories={ cat.subcategories} />
+                <Catergory key={cat.id} imageId={styles[cat.id]} desc={cat.name} categories={cat.subcategories} hasSubCategories={ cat.hasSubCategories} />
             ))}
         </div>
     )
