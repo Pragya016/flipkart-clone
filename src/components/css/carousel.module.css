@@ -1,0 +1,27 @@
+#carousel {
+    width: 95vw;
+    margin: auto;
+    background-size: cover;
+    background-position: center;
+    animation: changeBackground 15s infinite alternate;
+    height: 250px;
+    cursor: pointer;
+}
+
+@keyframes changeBackground {
+  0%{
+    background-image: url(https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/814a3428ea819df3.jpg?q=20);
+  }
+  25% {
+    background-image: url(https://rukminim2.flixcart.com/fk-p-flap/1000/170/image/029dded1a973385e.jpg?q=20);
+  }
+  50% {
+    background-image: url(https://rukminim2.flixcart.com/fk-p-flap/1000/170/image/f6cb8b7cbeafbd38.jpg?q=20);
+  }
+  75% {
+    background-image: url(https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/eda9fda22c567a49.jpg?q=20);
+  }
+  100% {
+    background-image: url(https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/9384b37a848c5e60.jpg?q=20);
+  }
+}

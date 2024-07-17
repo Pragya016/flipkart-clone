@@ -1,0 +1,31 @@
+#box {
+    border: 1px solid lightgrey;
+    height: 250px;
+    width: 200px;
+    margin: auto 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#image {
+    height: 150px;
+    width: 150px;
+}
+
+#category {
+    text-align: center;
+    font-size: 1rem;
+    margin: 10px 0 0 0;
+}
+
+#price {
+    font-weight: 500;
+    color: grey;
+    margin: 5px;
+}

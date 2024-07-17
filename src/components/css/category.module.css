@@ -1,0 +1,32 @@
+.categoryBox{
+    height: 100%;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.desc {
+    height: 20px;
+    width: 100%;
+}
+
+.categoryIcon {
+    height: 70px;
+    width: 70px;
+    background-position: center;
+    background-size: contain;
+}
+
+.categoryText {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+#popover {
+    padding: 20px;
+}

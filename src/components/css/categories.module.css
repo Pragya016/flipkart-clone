@@ -1,0 +1,59 @@
+#categories {
+    width: 95vw;
+    height: 125px;
+    margin: 75px auto 20px auto;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+/*----- category images ------*/
+
+#cat1 {
+    background: url('https://rukminim2.flixcart.com/flap/128/128/image/29327f40e9c4d26b.png?q=100');
+    background-position: center;
+    background-size: contain;
+}
+#cat2 {
+    background: url('https://rukminim2.flixcart.com/flap/128/128/image/22fddf3c7da4c4f4.png?q=100');
+    background-position: center;
+    background-size: contain;
+}
+#cat3 {
+    background: url('https://rukminim2.flixcart.com/fk-p-flap/128/128/image/0d75b34f7d8fbcb3.png?q=100');
+    background-position: center;
+    background-size: contain;
+}
+#cat4 {
+    background: url('https://rukminim2.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100');
+    background-position: center;
+    background-size: contain;
+}
+#cat5 {
+    background: url('https://rukminim2.flixcart.com/flap/128/128/image/ab7e2b022a4587dd.jpg?q=100');
+    background-position: center;
+    background-size: contain;
+}
+#cat6 {
+    background: url('https://rukminim2.flixcart.com/fk-p-flap/128/128/image/0139228b2f7eb413.jpg?q=100');
+    background-position: center;
+    background-size: contain;
+}
+#cat7 {
+    background: url('https://rukminim2.flixcart.com/flap/128/128/image/71050627a56b4693.png?q=100');
+    background-position: center;
+    background-size: contain;
+}
+#cat8 {
+    background: url('https://rukminim2.flixcart.com/flap/128/128/image/dff3f7adcf3a90c6.png?q=100');
+    background-position: center;
+    background-size: contain;
+}
+#cat9 {
+    background: url('https://rukminim2.flixcart.com/fk-p-flap/128/128/image/05d708653beff580.png?q=100');
+    background-position: center;
+    background-size: contain;
+}
