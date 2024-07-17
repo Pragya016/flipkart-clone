@@ -14,6 +14,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
+import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import { Divider } from '@mui/material';
 
 
@@ -167,9 +168,9 @@ export default function PrimarySearchAppBar() {
             noWrap
             component="div"
             sx={{ display: { xs: 'none', sm: 'block' } }}
-            style={{fontWeight:700}}
+            style={{fontWeight:700, position:'relative', bottom:'5px'}}
           >
-            Flipkart
+           <ShoppingBasketIcon style={{position:'relative', top:'7px', fontSize:'2rem'}}/> Clothify
           </Typography>
           <Search >
             <SearchIconWrapper>
