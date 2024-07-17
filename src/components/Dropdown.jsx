@@ -1,52 +1,27 @@
 import * as React from 'react';
-import Popover from '@mui/material/Popover';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import styles from './css/dropdown.module.css';
 
-export default function Dropdown({ desc, categories, onClick}) {
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const handlePopoverOpen = (event) => {
-    setAnchorEl(event.currentTarget);
-    console.log(event.currentTarget)
-  };
-
-  const handlePopoverClose = () => {
-    setAnchorEl(null);
-  };
-
-  const open = Boolean(anchorEl);
+export default function Dropdown({ desc, categories }) {
+  const [hover, setHover] = React.useState(false);
 
   return (
-    <div>
-      <div
-        // aria-owns={open ? 'mouse-over-popover' : undefined}
-        aria-haspopup="true"
-        onMouseEnter={handlePopoverOpen}
-        onMouseLeave={handlePopoverClose}
-      >
-        <p onClick={onclick}>{ desc}</p>
-        <Popover
-            id="mouse-over-popover"
-            sx={{
-            pointerEvents: 'none',
-            }}
-            open={open}
-            anchorEl={anchorEl}
-            anchorOrigin={{
-            vertical: 'bottom',
-            horizontal: 'left',
-            }}
-            transformOrigin={{
-            vertical: 'top',
-            horizontal: 'left',
-            }}
-            onClose={handlePopoverClose}
-            disableRestoreFocus
+    <>
+      <div id={styles.container}>
+        <div
+          id={styles.listItem}
+          onMouseEnter={() => setHover(true)}
+          onMouseLeave={() => setHover(false)}
         >
-            <ul id={styles.popover}>
-            <li>hello</li>
-            </ul>
-        </Popover>
+          <span id={styles.text}>{desc}</span>
+           <span>{hover && <ArrowForwardIosIcon style={{fontSize:'0.8rem', color:'grey'}} />}</span>
         </div>
-    </div>
+      <div className={styles.popover} onMouseLeave={() => setHover(false)} onMouseEnter={() => setHover(true)}>
+          {categories.length > 0 && categories.map((cat, index) => (
+            <p className={styles.popover_text} key={index}>{cat }</p>
+          ))}
+      </div>
+      </div>
+      </>
   );
 }

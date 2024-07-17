@@ -99,7 +99,7 @@ export default function PrimarySearchAppBar() {
     >
       <MenuItem onClick={handleMenuClose}>My Orders</MenuItem>
       <MenuItem onClick={handleMenuClose}>Wishlist</MenuItem>
-      <Divider style={{background:'black'}}/>
+      <Divider style={{background:'lightgrey', width:'90%', margin:'auto'}}/>
       <MenuItem onClick={handleMenuClose}>My Account</MenuItem>
     </Menu>
   );

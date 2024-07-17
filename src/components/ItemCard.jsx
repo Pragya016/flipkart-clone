@@ -7,8 +7,10 @@ export default function ItemCard({ item }) {
   return (
     <div id={styles.box}>
       <img id={styles.image} src={imageUrl} alt={`${name} image`} />
-      <h5 id={styles.category}>{name}</h5>
-      <p id={styles.price}>Starting from { price }</p>
+      <div id={styles.details}>
+        <p id={styles.category}>{name}</p>
+        <p id={styles.price}>Starting from {price}</p>
+      </div>
     </div>
   )
 }

@@ -1,3 +1,4 @@
+
 .categoryBox{
     height: 100%;
     width: 150px;
@@ -22,11 +23,29 @@
 }
 
 .categoryText {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 600;
     text-align: center;
+    color: grey;
 }
 
 #popover {
     padding: 20px;
+    color: grey;
+}
+
+.popover {
+    display: none;
+    position: absolute;
+    top: 175px;
+    width: 180px;
+    background-color: white;
+    box-shadow: 0 5px 5px grey;
+    border-radius: 5px;
+    margin-left: 50px;
+}
+
+#container:hover .popover {
+    display: block;
+    cursor: pointer;
 }
