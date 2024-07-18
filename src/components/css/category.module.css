@@ -1,7 +1,7 @@
 
 .categoryBox{
     height: 100%;
-    width: 150px;
+    width: 130px;
     display: flex;
     flex-direction: column;
     align-items: center;
